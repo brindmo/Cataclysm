@@ -353,7 +353,7 @@ itype* game::new_natural_artifact(artifact_natural_property prop)
 // Natural artifacts ALWAYS can recharge
 // (When "implanting" them in a mundane item, this ability may be lost
  if (!art->effects_activated.empty()) {
-  art->max_charges = rng(1, 4);
+  art->max_charges = rng(2, 6);
   art->def_charges = art->max_charges;
   art->charge_type = art_charge( rng(ARTC_NULL + 1, NUM_ARTCS - 1) );
  }
