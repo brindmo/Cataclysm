@@ -672,16 +672,16 @@ bool game::do_turn()
 void game::update_skills()
 {
 //    SKILL   TURNS/--
-//	1	4096
-//	2	2048
-//	3	1024
+//	1	  64
+//	2	 128
+//	3	 256
 //	4	 512
-//	5	 256
-//	6	 128
-//	7+	  64
+//	5	1024
+//	6	2048
+//	7+	4096
  for (int i = 0; i < num_skill_types; i++) {
   int tmp = u.sklevel[i] > 7 ? 7 : u.sklevel[i];
-  if (u.sklevel[i] > 0 && turn % (8192 / int(pow(2, double(tmp - 1)))) == 0 &&
+  if (u.sklevel[i] > 0 && turn % (64 * int(pow(2, double(tmp - 1)))) == 0 &&
       (( u.has_trait(PF_FORGETFUL) && one_in(3)) ||
        (!u.has_trait(PF_FORGETFUL) && one_in(4))   )) {
    if (u.has_bionic(bio_memory) && u.power_level > 0) {
