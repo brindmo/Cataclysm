@@ -2616,7 +2616,7 @@ void player::suffer(game *g)
    }
   }
   if ((has_trait(PF_SCHIZOPHRENIC) || has_artifact_with(AEP_SCHIZO)) &&
-      one_in(2400)) { // Every 4 hours or so
+ 	one_in(5200)) { // Every 8 hours or so
    monster phantasm;
    int i;
    switch(rng(0, 11)) {
@@ -2802,7 +2802,7 @@ void player::suffer(game *g)
 
  if (has_trait(PF_UNSTABLE) && one_in(28800))	// Average once per 2 days
   mutate(g);
- if (has_artifact_with(AEP_MUTAGENIC) && one_in(28800))
+ if (has_artifact_with(AEP_MUTAGENIC) && one_in(38800))
   mutate(g);
  if (has_artifact_with(AEP_FORCE_TELEPORT) && one_in(600))
   g->teleport(this);
@@ -2916,7 +2916,7 @@ int player::weight_capacity(bool real_life)
  if (has_trait(PF_HOLLOW_BONES))
   ret = int(ret * .60);
  if (has_artifact_with(AEP_CARRY_MORE))
-  ret += 200;
+  ret += 300;
  return ret;
 }
 
