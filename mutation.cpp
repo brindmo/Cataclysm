@@ -9,7 +9,7 @@ void mutation_loss_effect(game *g, player &p, pl_flag mut);
 
 void player::mutate(game *g)
 {
- bool force_bad = one_in(3); // 33% chance!
+ bool force_bad = one_in(4); // 40% chance!
  if (has_trait(PF_ROBUST) && force_bad && one_in(3))
   force_bad = false; // 11% chance!
 
@@ -276,7 +276,7 @@ void mutation_effect(game *g, player &p, pl_flag mut)
    p.str_max += 4;
    break;
   case PF_STR_UP_4:
-   p.str_max += 7;
+   p.str_max += 8;
    break;
 
   case PF_DEX_UP:
@@ -289,7 +289,7 @@ void mutation_effect(game *g, player &p, pl_flag mut)
    p.dex_max += 4;
    break;
   case PF_DEX_UP_4:
-   p.dex_max += 7;
+   p.dex_max += 8;
    break;
 
   case PF_INT_UP:
@@ -302,7 +302,7 @@ void mutation_effect(game *g, player &p, pl_flag mut)
    p.int_max += 4;
    break;
   case PF_INT_UP_4:
-   p.int_max += 7;
+   p.int_max += 8;
    break;
 
   case PF_PER_UP:
@@ -315,7 +315,7 @@ void mutation_effect(game *g, player &p, pl_flag mut)
    p.per_max += 4;
    break;
   case PF_PER_UP_4:
-   p.per_max += 7;
+   p.per_max += 8;
    break;
  }
 
@@ -350,7 +350,7 @@ void mutation_loss_effect(game *g, player &p, pl_flag mut)
    p.str_max -= 4;
    break;
   case PF_STR_UP_4:
-   p.str_max -= 7;
+   p.str_max -= 8;
    break;
 
   case PF_DEX_UP:
@@ -363,7 +363,7 @@ void mutation_loss_effect(game *g, player &p, pl_flag mut)
    p.dex_max -= 4;
    break;
   case PF_DEX_UP_4:
-   p.dex_max -= 7;
+   p.dex_max -= 8;
    break;
 
   case PF_INT_UP:
@@ -376,7 +376,7 @@ void mutation_loss_effect(game *g, player &p, pl_flag mut)
    p.int_max -= 4;
    break;
   case PF_INT_UP_4:
-   p.int_max -= 7;
+   p.int_max -= 8;
    break;
 
   case PF_PER_UP:
@@ -389,7 +389,7 @@ void mutation_loss_effect(game *g, player &p, pl_flag mut)
    p.per_max -= 4;
    break;
   case PF_PER_UP_4:
-   p.per_max -= 7;
+   p.per_max -= 8;
    break;
  }
 }
